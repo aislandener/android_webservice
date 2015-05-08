@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://servico/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://servico/">
+
+<xs:element name="celsiusToFahrenheit" type="tns:celsiusToFahrenheit" />
+
+<xs:element name="celsiusToFahrenheitResponse" type="tns:celsiusToFahrenheitResponse" />
+
+<xs:element name="fahrenheitToCelsius" type="tns:fahrenheitToCelsius" />
+
+<xs:element name="fahrenheitToCelsiusResponse" type="tns:fahrenheitToCelsiusResponse" />
+
+<xs:element name="hello" type="tns:hello" />
+
+<xs:element name="helloResponse" type="tns:helloResponse" />
+
+<xs:complexType name="fahrenheitToCelsius">
+<xs:sequence>
+<xs:element name="fahrenheit" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fahrenheitToCelsiusResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="celsiusToFahrenheit">
+<xs:sequence>
+<xs:element name="celsius" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="celsiusToFahrenheitResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

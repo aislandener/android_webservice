@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://www.w3schools.com/webservices/tempconvert.asmx?WSDL" uri="wsdl/www.w3schools.com/webservices/tempconvert.asmx.wsdl"/>
+    <system systemId="http://localhost:8080/ConversorTemperartura_WS/TempConvertWS?wsdl" uri="wsdl/localhost_8080/ConversorTemperartura_WS/TempConvertWS.wsdl"/>
+    <system systemId="http://localhost:8080/ConversorTemperartura_WS/TempConvertWS?xsd=1" uri="wsdl/localhost_8080/ConversorTemperartura_WS/TempConvertWS.xsd_1.xsd"/>
+</catalog>

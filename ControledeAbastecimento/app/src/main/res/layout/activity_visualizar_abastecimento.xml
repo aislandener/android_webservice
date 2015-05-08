@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="claretiano.br.app02.view.VisualizarAbastecimento">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20sp"
+        android:text="@string/visualizar_dados"
+        android:textColor="@color/foreground"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:id="@+id/tabelaResultado"
+        android:layout_width="match_parent"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:id="@+id/trLinha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1sp"
+            >
+
+            <TextView
+                android:id="@+id/txtPosto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/posto"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/foreground"
+                android:layout_marginRight="5sp"
+                />
+
+            <TextView
+                android:id="@+id/txtData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/data"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/foreground"
+                android:layout_marginRight="5sp"
+                />
+
+            <TextView
+                android:id="@+id/txtCombustivel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/combustivel"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/foreground"
+                android:layout_marginRight="5sp"
+                />
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/total"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/foreground"
+                android:layout_marginRight="5sp"
+                />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

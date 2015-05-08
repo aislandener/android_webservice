@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FFFFFF</color>
+    <color name="foreground">#444444</color>
+    <color name="botao_texto">#FFFFFF</color>
+    <color name="botao_fundo">#770000</color>
+    <color name="texto_fundo">#999999</color>
+    <color name="fundo_falso">#FFFFFF</color>
+</resources>
