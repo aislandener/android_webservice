@@ -2,10 +2,10 @@
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services/>
   <clients>
-    <client name="tempconvert">
-      <wsdl-url>http://www.w3schools.com/webservices/tempconvert.asmx?WSDL</wsdl-url>
-      <local-wsdl-file>www.w3schools.com/webservices/tempconvert.asmx.wsdl</local-wsdl-file>
-      <package-name forceReplace="true">servico</package-name>
+    <client name="TempConvertWS">
+      <wsdl-url>http://localhost:8080/ConversorTemperartura_WS/TempConvertWS?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8080/ConversorTemperartura_WS/TempConvertWS.wsdl</local-wsdl-file>
+      <package-name>servico</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
         <wsimport-option>
@@ -22,7 +22,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://www.w3schools.com/webservices/tempconvert.asmx?WSDL</wsimport-option-value>
+          <wsimport-option-value>http://localhost:8080/ConversorTemperartura_WS/TempConvertWS?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>
@@ -31,10 +31,6 @@
         <wsimport-option>
           <wsimport-option-name>xendorsed</wsimport-option-name>
           <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>package</wsimport-option-name>
-          <wsimport-option-value>servico</wsimport-option-value>
         </wsimport-option>
       </wsimport-options>
     </client>

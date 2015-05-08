@@ -4,6 +4,12 @@
 <xsd:import namespace="http://servico/" schemaLocation="http://localhost:8080/ConversorTemperartura_WS/TempConvertWS?xsd=1" />
 </xsd:schema>
 </types>
+<message name="hello">
+<part name="parameters" element="tns:hello" />
+</message>
+<message name="helloResponse">
+<part name="parameters" element="tns:helloResponse" />
+</message>
 <message name="celsiusToFahrenheit">
 <part name="parameters" element="tns:celsiusToFahrenheit" />
 </message>
@@ -16,13 +22,11 @@
 <message name="fahrenheitToCelsiusResponse">
 <part name="parameters" element="tns:fahrenheitToCelsiusResponse" />
 </message>
-<message name="hello">
-<part name="parameters" element="tns:hello" />
-</message>
-<message name="helloResponse">
-<part name="parameters" element="tns:helloResponse" />
-</message>
 <portType name="TempConvertWS">
+<operation name="hello">
+<input wsam:Action="http://servico/TempConvertWS/helloRequest" message="tns:hello" />
+<output wsam:Action="http://servico/TempConvertWS/helloResponse" message="tns:helloResponse" />
+</operation>
 <operation name="celsiusToFahrenheit">
 <input wsam:Action="http://servico/TempConvertWS/celsiusToFahrenheitRequest" message="tns:celsiusToFahrenheit" />
 <output wsam:Action="http://servico/TempConvertWS/celsiusToFahrenheitResponse" message="tns:celsiusToFahrenheitResponse" />
@@ -31,13 +35,18 @@
 <input wsam:Action="http://servico/TempConvertWS/fahrenheitToCelsiusRequest" message="tns:fahrenheitToCelsius" />
 <output wsam:Action="http://servico/TempConvertWS/fahrenheitToCelsiusResponse" message="tns:fahrenheitToCelsiusResponse" />
 </operation>
-<operation name="hello">
-<input wsam:Action="http://servico/TempConvertWS/helloRequest" message="tns:hello" />
-<output wsam:Action="http://servico/TempConvertWS/helloResponse" message="tns:helloResponse" />
-</operation>
 </portType>
 <binding name="TempConvertWSPortBinding" type="tns:TempConvertWS">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+<operation name="hello">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
 <operation name="celsiusToFahrenheit">
 <soap:operation soapAction="" />
 <input>
@@ -48,15 +57,6 @@
 </output>
 </operation>
 <operation name="fahrenheitToCelsius">
-<soap:operation soapAction="" />
-<input>
-<soap:body use="literal" />
-</input>
-<output>
-<soap:body use="literal" />
-</output>
-</operation>
-<operation name="hello">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />

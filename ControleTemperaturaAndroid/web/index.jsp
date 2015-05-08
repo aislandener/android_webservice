@@ -4,6 +4,7 @@
     Author     : lab2
 --%>
 
+<%@page import="servicosweb.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,10 +19,10 @@
             String v2 = request.getParameter("txtFahrenheit");
             
             //referenciar
-            servicosweb.TempConvertWS_Service srv = new servicosweb.TempConvertWS_Service();
+            TempConvertWS_Service srv = new TempConvertWS_Service();
             
             //opereções            
-            servicosweb.TempConvertWS op = srv.getTempConvertWSPort();
+            //servicosweb.TempConvertWS op = srv.getTempConvertWSPort();
             
             
             if ( v1 != null ){
@@ -34,7 +35,6 @@
                 v1= "";
                 v2= "";
             }
-            
         %>
         <h1>Conversor de Temperaturas</h1>
         <form name="frmConversor" action="index.jsp" method="post">

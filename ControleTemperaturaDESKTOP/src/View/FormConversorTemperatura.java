@@ -5,8 +5,8 @@
  */
 package View;
 
-import servico.TempConvert;
-import servico.TempConvertSoap;
+import servico.TempConvertWS;
+import servico.TempConvertWS_Service;
 
 /**
  *
@@ -124,10 +124,10 @@ public class FormConversorTemperatura extends javax.swing.JFrame {
 
     private void btnConverterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConverterActionPerformed
         //referenciar o serviço que será consumido pela aplicação
-        TempConvert srv = new TempConvert();
+        TempConvertWS_Service srv = new TempConvertWS_Service();
         
         //identificar as operações fornecidas pelo serviço
-        TempConvertSoap op = srv.getTempConvertSoap();
+        TempConvertWS op = srv.getTempConvertWSPort();
         
         String res;
         if( !txtCelsius.getText().isEmpty()){
