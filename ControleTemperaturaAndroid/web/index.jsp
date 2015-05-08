@@ -4,8 +4,6 @@
     Author     : lab2
 --%>
 
-<%@page import="servico.TempConvertSoap"%>
-<%@page import="servico.TempConvert"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,20 +13,22 @@
     </head>
     <body>
         <%
+            
             String v1 = request.getParameter("txtCelsius");
             String v2 = request.getParameter("txtFahrenheit");
             
             //referenciar
-            TempConvert srv = new TempConvert();
+            servicosweb.TempConvertWS_Service srv = new servicosweb.TempConvertWS_Service();
             
-            //opereções
-            TempConvertSoap op = srv.getTempConvertSoap();
+            //opereções            
+            servicosweb.TempConvertWS op = srv.getTempConvertWSPort();
+            
             
             if ( v1 != null ){
                 if( !v1.isEmpty()){
-                    v2 = op.celsiusToFahrenheit(v1);
+                    //v2 = op.celsiusToFahrenheit(v1);
                 }else{
-                    v1 = op.fahrenheitToCelsius(v2);
+                    //v1 = op.fahrenheitToCelsius(v2);
                 }
             }else{
                 v1= "";

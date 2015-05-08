@@ -26,21 +26,21 @@
             <isset property="conf.dir"/>
         </condition>
     </target>
-    <target name="wsimport-client-tempconvert" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/tempconvert"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/tempconvert" destdir="${build.generated.dir}/jax-wsCache/tempconvert" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/tempconvert/wsdl/www.w3schools.com/webservices/tempconvert.asmx.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://www.w3schools.com/webservices/tempconvert.asmx?WSDL" xnocompile="true" xendorsed="true" package="servico">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/tempconvert/wsdl/www.w3schools.com/webservices/tempconvert.asmx.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/tempconvert"/>
+    <target name="wsimport-client-TempConvertWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/TempConvertWS"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/TempConvertWS" destdir="${build.generated.dir}/jax-wsCache/TempConvertWS" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/TempConvertWS/wsdl/localhost_8080/ConversorTemperartura_WS/TempConvertWS.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ConversorTemperartura_WS/TempConvertWS?wsdl" xnocompile="true" xendorsed="true" package="servicosweb">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/TempConvertWS/wsdl/localhost_8080/ConversorTemperartura_WS/TempConvertWS.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/TempConvertWS"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/tempconvert">
+            <fileset dir="${build.generated.dir}/jax-wsCache/TempConvertWS">
                 <include name="**/*.java"/>
             </fileset>
         </copy>
     </target>
-    <target name="wsimport-client-clean-tempconvert" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/servico"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/tempconvert"/>
+    <target name="wsimport-client-clean-TempConvertWS" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/servicosweb"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/TempConvertWS"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-tempconvert"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-TempConvertWS"/>
 </project>
